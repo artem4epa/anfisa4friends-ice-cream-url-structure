@@ -1,12 +1,24 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Главная страница')
+    template = 'ice_cream/index.html'
+    text = 'Ворона'
+    title = 'Пипец'
+    context = {
+        'text': text,
+        'title': title
+    }
+    return render(request, template, context)
+
+def first(request):
+    template = 'ice_cream/first.html'
+    return render(request, template, context)
 
 
 def ice_cream_list(request):
-    return HttpResponse('Список мороженого')
+    template = ''
+    return render(request, template, context)
 
 
 # В урл мы ждем парметр, и нужно его прередать в функцию для использования
