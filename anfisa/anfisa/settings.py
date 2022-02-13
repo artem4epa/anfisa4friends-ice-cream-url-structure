@@ -52,6 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'anfisa.urls'
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
