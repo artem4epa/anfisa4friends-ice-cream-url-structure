@@ -28,7 +28,7 @@ urlpatterns = [
     # Дорогой Джанго, если на сервер пришёл любой запрос (''),
     # перейди в файл urls приложения ice_cream
     # и проверь там все path() на совпадение с запрошенным URL
-    path('', include('ice_cream.urls')),
+    path('', include('ice_cream.urls', namespace='ice_cream')),
     # Если в приложении ice_cream не найдётся совпадений -
     # Django продолжит искать совпадения здесь, в головном файле urls.py.
 
