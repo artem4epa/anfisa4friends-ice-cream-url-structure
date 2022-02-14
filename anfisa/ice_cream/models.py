@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 # Create your models here.
 # Объявляем класс IceCream, наследник класса Model из пакета models
+User = get_user_model()
 class IceCream(models.Model):
     # Описываем поля модели и их типы
     # Тип: CharField (строка с ограничением длины)
